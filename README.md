@@ -5,21 +5,22 @@ This repository contains a Python implementation of a pairs trading strategy usi
 ## Components and Rationale
 
 ### 1. Residual Spread Calculation
-- **Equation**: \(\text{residual} = (P_{\text{stock1}} - P_{\text{stock2}}) - \gamma \times \text{market\_excess\_return}\)
+- **Equation**: \[ \text{residual} = (P_{\text{stock1}} - P_{\text{stock2}}) - \gamma \times \text{market\_excess\_return} \]
 - **Rationale**: Adjusting for market excess returns isolates stock-specific price movements, removing broad market trends. This focuses the model on the unique relationship between the stock pair, filtering out systematic risk and honing in on idiosyncratic risk.
 
 ### 2. Vasicek Mean Reversion Model
-- **Equation**: \(dx_t = \kappa (\theta - x_t) dt + \sigma dB_t\)
+- **Equation**: \[ dx_t = \kappa (\theta - x_t) \, dt + \sigma \, dB_t \]
 - **Rationale**: The Vasicek model is a classic stochastic process used to describe mean-reverting behavior. It captures the tendency of the spread to revert to its historical mean. This provides a robust mathematical framework for predicting price convergence, which is fundamental in pairs trading.
 
 ### 3. Kalman Filter
 - **Equations**: 
-  \[
-  x_t = F x_{t-1} + w_t
-  \]
-  \[
-  y_t = H x_t + v_t
-  \]
+  \[ 
+x_t = F x_{t-1} + w_t 
+\]
+
+\[ 
+y_t = H x_t + v_t 
+\]
 - **Rationale**: The Kalman filter estimates and smooths the residual spread, providing clearer trading signals by filtering out noise. This enhances the accuracy of trading signals, making the model more robust in real-time trading.
 
 ## Advantages of the Model
