@@ -5,7 +5,7 @@ This repository contains a Python implementation of a pairs trading strategy usi
 ## Components and Rationale
 
 ### 1. Residual Spread Calculation
-- **Equation**: \[ residual = (P_{\text{stock1}} - P_{\text{stock2}}) - \gamma \times \text{market\_excess\_return} \]
+- **Equation**: \[ \text{residual} = (P_{\text{stock1}} - P_{\text{stock2}}) - \gamma \times \text{market\_excess\_return} \]
 - **Rationale**: Adjusting for market excess returns isolates stock-specific price movements, removing broad market trends. This focuses the model on the unique relationship between the stock pair, filtering out systematic risk and honing in on idiosyncratic risk.
 
 ### 2. Vasicek Mean Reversion Model
