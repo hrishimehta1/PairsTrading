@@ -264,6 +264,34 @@ def run_pairs_all_sectors(market_excess_return, theta, kappa, sigma, gamma, delt
     sector(qqq, market_excess_return, theta, kappa, sigma, gamma, delta_t, threshold, convergence_threshold)
     sector(xlc, market_excess_return, theta, kappa, sigma, gamma, delta_t, threshold, convergence_threshold)
     sector(smh, market_excess_return, theta, kappa, sigma, gamma, delta_t, threshold, convergence_threshold)
+# XLY Consumer Discretionary
+xly = ['amzn', 'tsla', 'mcd', 'hd', 'low', 'nke', 'sbux', 'tjx', 'tgt', 'bkng']
+
+# XLP Cons Staples 
+xlp = ['pg', 'pep', 'ko', 'cost', 'wmt', 'pm', 'mo', 'cl', 'adm'] # 'mdlz', 
+
+# XLF Financial  brk.b
+xlf = ['jpm', 'bac', 'wfc', 'schw', 'gs', 'ms', 'spgi', 'blk', 'cb']
+
+# XLV Healthcare
+xlv = ['unh', 'jnj', 'lly', 'pfe', 'abbv', 'mrk', 'tmo', 'abt', 'bmy', 'dhr']
+
+# XLI Industrials
+xli = ['rtx', 'hon', 'unp', 'ups', 'lmt', 'cat', 'de', 'ge', 'noc', 'ba']
+
+# XLB Materials
+xlb = ['lin', 'apd', 'shw', 'ctva', 'fcx', 'ecl', 'nue', 'nem', 'dow', 'alb']
+
+# XLK / QQQ Technology
+xlk = ['aapl', 'msft', 'v', 'nvda', 'ma', 'avgo', 'csco', 'acn', 'crm', 'adbe', 'qcom', 'ibm', 'amd', 'amat', 'intc']
+qqq = ['aapl', 'amzn', 'msft', 'goog', 'meta', 'nvda', 'tsla', 'pypl', 'adbe', 'nflx'] # 'adbe', 
+
+# XLC Communications
+xlc = ['meta', 'googl', 'nflx', 'chtr', 'cmcsa', 'tmus', 'dis', 't', 'vz']
+
+# SMH Semiconductors 
+smh = ['tsm', 'nvda', 'asml', 'avgo', 'txn', 'adi', 'klac', 'lrcx', 'qcom', 'intc', 'amat', 'mu', 'amd'] # 'intc', 'amat', error
+
 
 nowtime = str(datetime.datetime.now())
 
